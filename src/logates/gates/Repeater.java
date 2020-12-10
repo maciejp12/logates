@@ -9,7 +9,7 @@ public class Repeater extends Gate {
 
     public Repeater(int x, int y) {
         minInPorts = 1;
-        maxInPorts = maxPortsNumber;
+        maxInPorts = 1;
         minOutPorts = 1;
         maxOutPorts = maxPortsNumber;
 
