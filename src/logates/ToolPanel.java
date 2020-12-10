@@ -72,7 +72,7 @@ public class ToolPanel extends JPanel implements ActionListener {
     private JButton unselect;
 
 
-    private static Color buttonBackground = new Color(224, 224, 224);
+    public static Color buttonBackground = new Color(224, 224, 224);
 
     private SceneObject selectedObject;
 

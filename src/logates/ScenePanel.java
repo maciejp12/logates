@@ -74,6 +74,16 @@ public class ScenePanel extends JPanel {
         add(utilityPanel, BorderLayout.SOUTH);
     }
 
+    /*
+        Move main draw panel view rectangle to top left corner of
+        its container ((0, 0) position
+
+        Draw panel width and height and all its scene objects remain unchanged
+     */
+    public void resetView() {
+        drawPanel.setBounds(0, 0, drawPanel.getWidth(), drawPanel.getHeight());
+    }
+
     public static ScenePanel getInstance() {
         return instance;
     }

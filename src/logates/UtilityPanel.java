@@ -2,8 +2,10 @@ package logates;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UtilityPanel extends JPanel {
+public class UtilityPanel extends JPanel implements ActionListener  {
 
     /*
         Background color of panel
@@ -45,22 +47,38 @@ public class UtilityPanel extends JPanel {
      */
     protected JLabel selectedInfo;
 
+    /*
+        Sets position of main draw panel to 0, 0 (top left corner)
+     */
+    protected JButton resetView;
+
+
     public UtilityPanel() {
         setBackground(backgroundColor);
+        setLayout(new GridLayout(1, 4, 8, 8));
 
+        resetView = new JButton("reset view");
         mousePosition = new JLabel(initMousePosString);
         selectedInfo = new JLabel(noneSelected);
         currentTool = new JLabel(noToolSelected);
+
+        decorateButton(resetView);
 
         mousePosition.setForeground(textColor);
         currentTool.setForeground(textColor);
         selectedInfo.setForeground(textColor);
 
-        setLayout(new GridLayout(1, 3));
-
         add(mousePosition);
         add(currentTool);
         add(selectedInfo);
+    }
+
+
+    private void decorateButton(JButton b) {
+        b.setFocusable(false);
+        b.addActionListener(this);
+        b.setBackground(ToolPanel.buttonBackground);
+        add(b);
     }
 
     /*
@@ -91,6 +109,12 @@ public class UtilityPanel extends JPanel {
         }
     }
 
+    /*
+        Update currently selected tool information
+
+        If no tool is selected (so is null) set currentTool text to
+        noToolSelected string value
+     */
     protected void updateCurrentTool(SceneObject so) {
         if (so == null) {
             currentTool.setText(noToolSelected);
@@ -99,5 +123,18 @@ public class UtilityPanel extends JPanel {
             String s = "current tool : " + tool;
             currentTool.setText(s);
         }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+
+        if (source == resetView) {
+            getScenePanel().resetView();
+        }
+    }
+
+    public ScenePanel getScenePanel() {
+        return (ScenePanel) getParent();
     }
 }
