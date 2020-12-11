@@ -150,7 +150,6 @@ public class PortTest {
         }
 
         Assert.assertFalse(source.getState());
-        Assert.assertFalse(target.getState());
     }
 
     @Test

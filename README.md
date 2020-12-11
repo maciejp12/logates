@@ -20,7 +20,7 @@ $ find src/ -name "*.java" -print | xargs javac -cp junit-4.9.jar -d out/product
 ```
 Run tests:
 ```
-$ java -cp junit-4.9.jar org.junit.runner.JUnitCore out/production/logates/test/*
+$ java -cp out/production/logates/:junit-4.9.jar org.junit.runner.JUnitCore test.GateTest test.LogicCalculatorTest test.PortTest test.PositionTest
 ```
 Run application:
 ```
