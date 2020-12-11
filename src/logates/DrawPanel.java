@@ -44,6 +44,16 @@ public class DrawPanel extends JPanel implements MouseListener, MouseMotionListe
     private static int gridLinesThickness = 1;
 
     /*
+        Space between each horizontal grid line in pixels
+     */
+    private static int gridLinesHorizontalGap = 32;
+
+    /*
+        Space between each vertical grid line in pixels
+     */
+    private static int gridLinesVerticalGap = 32;
+
+    /*
         All scene objects displayed on the panel
      */
     public List<SceneObject> sceneObjects;
@@ -159,16 +169,14 @@ public class DrawPanel extends JPanel implements MouseListener, MouseMotionListe
 
         g2.setColor(gridLinesColor);
 
-        int hGap = 32;
-        int vGap = 32;
         int wid = getBounds().width;
         int hei = getBounds().height;
 
-        for(int i = 0; i < hei; i += hGap) {
+        for(int i = 0; i < hei; i += gridLinesHorizontalGap) {
             g2.drawLine(0, i, wid, i);
         }
 
-        for(int i = 0; i < wid; i += vGap) {
+        for(int i = 0; i < wid; i += gridLinesVerticalGap) {
             g2.drawLine(i, 0, i, hei);
         }
     }

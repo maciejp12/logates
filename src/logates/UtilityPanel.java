@@ -52,15 +52,22 @@ public class UtilityPanel extends JPanel implements ActionListener  {
      */
     protected JButton resetView;
 
+    /*
+        Displays frame with information about this application,
+        instructions on how to use it and its features
+     */
+    protected JButton showAbout;
+
 
     public UtilityPanel() {
         setBackground(backgroundColor);
-        setLayout(new GridLayout(1, 4, 8, 8));
+        setLayout(new GridLayout(1, 5, 8, 8));
 
         resetView = new JButton("reset view");
         mousePosition = new JLabel(initMousePosString);
         selectedInfo = new JLabel(noneSelected);
         currentTool = new JLabel(noToolSelected);
+        showAbout = new JButton("about");
 
         decorateButton(resetView);
 
@@ -71,6 +78,8 @@ public class UtilityPanel extends JPanel implements ActionListener  {
         add(mousePosition);
         add(currentTool);
         add(selectedInfo);
+
+        decorateButton(showAbout);
     }
 
 
@@ -131,7 +140,26 @@ public class UtilityPanel extends JPanel implements ActionListener  {
 
         if (source == resetView) {
             getScenePanel().resetView();
+        } else if (source == showAbout) {
+            displayAboutFrame();
         }
+    }
+
+    /*
+        Display new about window
+     */
+    protected void displayAboutFrame() {
+        JFrame aboutFrame = new JFrame();
+        JScrollPane scrollPane = new JScrollPane(new AboutPanel());
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+        aboutFrame.setTitle("logates - about");
+        aboutFrame.setBounds(100, 100, 600, 600);
+        aboutFrame.setContentPane(scrollPane);
+
+        aboutFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        aboutFrame.setVisible(true);
     }
 
     public ScenePanel getScenePanel() {
