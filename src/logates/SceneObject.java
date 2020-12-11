@@ -17,7 +17,7 @@ public abstract class SceneObject {
     /*
         Number of diffrent rotation tyoes
      */
-    protected static int rotationStates = 4;
+    public static int rotationStates = 4;
 
     /*
         Delay time in ms after updating active state of scene object

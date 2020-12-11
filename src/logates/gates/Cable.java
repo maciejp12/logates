@@ -9,11 +9,11 @@ import java.awt.*;
 
 public class Cable extends Gate {
 
-    protected static Color activeColor = new Color(32, 224, 64);
+    private static Color activeCableColor = new Color(32, 224, 64);
 
     private static int thickness = 2;
 
-    protected static int rotationStates = 3;
+    public static int rotationStates = 3;
 
 
     public Cable(int x1, int y1, int x2, int y2) {
@@ -71,7 +71,7 @@ public class Cable extends Gate {
         if (!state) {
             g2.setColor(idleColor);
         } else {
-            g2.setColor(activeColor);
+            g2.setColor(activeCableColor);
         }
 
         Port ip = getInPort();

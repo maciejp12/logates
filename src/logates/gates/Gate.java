@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public abstract class Gate extends SceneObject {
 
-    protected static Color activeColor = new Color(0, 200, 0);
-    protected static Color inactiveColor = new Color(200, 0, 0);
-    protected static Color idleColor = new Color(0, 0, 0);
+    public static Color activeColor = new Color(0, 200, 0);
+    public static Color inactiveColor = new Color(200, 0, 0);
+    public static Color idleColor = new Color(0, 0, 0);
 
     /*
         Current active state of gate
@@ -53,7 +53,7 @@ public abstract class Gate extends SceneObject {
     /*
         Maximum number of input port list size or output port list size possible
      */
-    protected static int maxPortsNumber = 1024;
+    public static int maxPortsNumber = 1024;
     /*
         Initialize ports lists
      */
