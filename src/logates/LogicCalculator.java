@@ -14,7 +14,7 @@ public class LogicCalculator {
         return states;
     }
 
-    public  static boolean calculateAnd(boolean[] states) {
+    public static boolean calculateAnd(boolean[] states) {
         if (states.length == 0) {
             return false;
         }

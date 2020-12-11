@@ -29,7 +29,7 @@ public class DrawPanel extends JPanel implements MouseListener, MouseMotionListe
     private static Color selectedFrameColor = new Color(16, 16, 224, 128);
 
     /*
-        Thickness of frame bounds around currently selected objec in pixels
+        Thickness of frame bounds around currently selected object in pixels
      */
     private static int selectedFrameThickness = 2;
 
