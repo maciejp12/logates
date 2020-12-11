@@ -8,7 +8,7 @@ Java desktop application for logic circuts simulation
 ## General info
 The project is java desktop application created with java swing library. Project features simulator of logic gates and cables circuts.
 ## Technology
-Project is created with Java 11.
+Project is created with Java 13.
 
 To run tests junit-4.9 library is needed.
 ## Setup
