@@ -16,7 +16,7 @@ To compile project use:
 ```
 $ git clone "https://github.com/maciejp12/logates.git"
 $ cd logates
-$ find src/logates/ -name "*.java" -print | xargs javac -d out/production/logates/logates/
+$ find src/ -name "*.java" -print | xargs javac -cp junit-4.9.jar -d out/production/logates/
 ```
 Run tests:
 ```
