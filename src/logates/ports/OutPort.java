@@ -75,7 +75,9 @@ public class OutPort extends Port {
     @Override
     public void removeFromList(List<SceneObject> sceneObjects) {
         super.removeFromList(sceneObjects);
-        source.getInPort().disconnect();
+        if(source.inPorts.size() != 0) {
+            source.getInPort().disconnect();
+        }
         sceneObjects.remove(source.getInPort());
         sceneObjects.remove(source);
     }
