@@ -4,6 +4,7 @@ Java desktop application for logic circuts simulation
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Features](#features)
 
 ## General info
 The project is java desktop application created with java swing library. Project features simulator of logic gates and cables circuts.
