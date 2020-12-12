@@ -1,8 +1,8 @@
 package test;
 
-import logates.SceneObject;
-import logates.gates.Cable;
-import logates.ports.Port;
+import logates.sceneobject.SceneObject;
+import logates.sceneobject.gates.Cable;
+import logates.sceneobject.ports.Port;
 import org.junit.Assert;
 import org.junit.Test;
 

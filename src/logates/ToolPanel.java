@@ -1,7 +1,9 @@
 package logates;
 
-import logates.gates.*;
-import logates.gates.Button;
+import logates.sceneobject.Position;
+import logates.sceneobject.SceneObject;
+import logates.sceneobject.gates.*;
+import logates.sceneobject.gates.Button;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -359,8 +361,8 @@ public class ToolPanel extends JPanel implements ActionListener {
 
                 int minWid = Position.getMinWidth();
                 int minHei = Position.getMinHeight();
-                int wid = selectedGate.position.getWidth();
-                int hei = selectedGate.position.getHeight();
+                int wid = selectedGate.getPosition().getWidth();
+                int hei = selectedGate.getPosition().getHeight();
 
                 boolean canRemoveWidth = wid > minWid;
                 boolean canRemoveHeight = hei > minHei;

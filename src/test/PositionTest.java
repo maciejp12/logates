@@ -1,6 +1,6 @@
 package test;
 
-import logates.Position;
+import logates.sceneobject.Position;
 import org.junit.Assert;
 import org.junit.Test;
 

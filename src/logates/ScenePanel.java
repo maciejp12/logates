@@ -87,4 +87,8 @@ public class ScenePanel extends JPanel {
     public static ScenePanel getInstance() {
         return instance;
     }
+
+    public DrawPanel getDrawPanel() {
+        return drawPanel;
+    }
 }

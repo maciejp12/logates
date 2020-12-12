@@ -1,9 +1,10 @@
 package logates;
 
-import logates.gates.Gate;
-import logates.ports.InPort;
-import logates.ports.OutPort;
-import logates.ports.Port;
+import logates.sceneobject.Position;
+import logates.sceneobject.SceneObject;
+import logates.sceneobject.ports.InPort;
+import logates.sceneobject.ports.OutPort;
+import logates.sceneobject.ports.Port;
 
 import javax.swing.*;
 import java.awt.*;
@@ -224,7 +225,7 @@ public class DrawPanel extends JPanel implements MouseListener, MouseMotionListe
             g2.setStroke(new BasicStroke(selectedFrameThickness));
 
             g2.setColor(selectedFrameColor);
-            Position sp = selected.position;
+            Position sp = selected.getPosition();
             g2.drawRect(sp.getX(), sp.getY(), sp.getWidth(), sp.getHeight());
         }
     }

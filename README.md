@@ -16,11 +16,11 @@ To compile project use:
 ```
 $ git clone "https://github.com/maciejp12/logates.git"
 $ cd logates
-$ find src/ -name "*.java" -print | xargs javac -cp junit-4.9.jar -d out/production/logates/
+$ find src/ -name "*.java" -print | xargs javac -cp lib/junit-4.9.jar -d out/production/logates/
 ```
 Run tests:
 ```
-$ java -cp out/production/logates/:junit-4.9.jar org.junit.runner.JUnitCore test.GateTest test.LogicCalculatorTest test.PortTest test.PositionTest
+$ java -cp out/production/logates/:lib/junit-4.9.jar org.junit.runner.JUnitCore test.GateTest test.LogicCalculatorTest test.PortTest test.PositionTest
 ```
 Run application:
 ```
@@ -104,7 +104,7 @@ $ java -cp out/production/logates/ logates.Main
    All objects can be rotated and resized(excluding cables). To rotate an object first select it and click rotate selected
     button on top panel(or press key 'r').
 
-   To aesize an object first select it and click
+   To resize an object first select it and click
     add/remove width/height buttons on top panel.
     Objects cannot be resized to be smaller than
     minimum size(default 16px width and 16px height).
@@ -126,9 +126,6 @@ $ java -cp out/production/logates/ logates.Main
 
    To show about page click about on bottom panel.
 
-   Link ot repository of this project:
-
-   	https://github.com/maciejp12/logates
 
 Example screenshot:
 

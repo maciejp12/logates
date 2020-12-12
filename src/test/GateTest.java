@@ -1,11 +1,11 @@
 package test;
 
-import logates.SceneObject;
-import logates.gates.AndGate;
-import logates.gates.Button;
-import logates.gates.Gate;
-import logates.gates.Lamp;
-import logates.ports.OutPort;
+import logates.sceneobject.SceneObject;
+import logates.sceneobject.gates.AndGate;
+import logates.sceneobject.gates.Button;
+import logates.sceneobject.gates.Gate;
+import logates.sceneobject.gates.Lamp;
+import logates.sceneobject.ports.OutPort;
 import org.junit.Assert;
 import org.junit.Test;
 
