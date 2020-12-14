@@ -160,9 +160,16 @@ public class UtilityPanel extends JPanel implements ActionListener  {
         aboutFrame.setBounds(100, 100, 600, 600);
         aboutFrame.setContentPane(scrollPane);
 
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                scrollPane.getVerticalScrollBar().setValue(0);
+            }
+        });
+
         aboutFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         aboutFrame.setVisible(true);
     }
+
 
     public ScenePanel getScenePanel() {
         return (ScenePanel) getParent();
