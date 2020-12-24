@@ -37,7 +37,7 @@ $ java -cp out/production/logates/ logates.Main
     draw panel. To cancel selected tool click cancel button.
 
    Available types of scene objects:
-   * Cable (for connection other compontnts)
+   * Cable (for connecting other components)
    * And logic gate
    * Or logic gate
    * Not logic gate
